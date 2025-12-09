@@ -1,0 +1,200 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background: #00010a;
+    color: white;
+    overflow-x: hidden;
+}
+
+.bg-animated {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -5;
+    background: linear-gradient(120deg, #1a1f3c, #0a0f24, #1d0537, #001d2f);
+    background-size: 400% 400%;
+    animation: gradientFlow 18s ease infinite;
+    filter: brightness(1.1);
+}
+
+@keyframes gradientFlow {
+    0% {
+        background-position: 0 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0 50%;
+    }
+}
+
+.shape {
+    position: absolute;
+    width: 320px;
+    height: 320px;
+    border: 2px solid rgba(0, 200, 255, 0.3);
+    border-radius: 50%;
+    filter: blur(1px);
+    animation: spin 16s linear infinite;
+    z-index: -3;
+}
+
+.shape2 {
+    border-color: rgba(255, 0, 240, 0.35);
+    width: 450px;
+    height: 450px;
+    top: 25%;
+    left: 67%;
+    animation-duration: 26s;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 80px 80px 80px;
+}
+
+.hero-text {
+    color: white;
+    max-width: 500px;
+    animation: fadeUp 1.3s ease;
+}
+
+.hero-text h1 {
+    font-size: 70px;
+    font-weight: 800;
+    line-height: 1.05;
+    margin-bottom: 25px;
+    text-shadow: 0 0 35px rgba(0, 200, 255, 0.2);
+}
+
+.hero-text p {
+    font-size: 20px;
+    opacity: 0.85;
+    line-height: 1.6;
+    text-shadow: 0 0 35px rgba(0, 200, 255, 0.2);
+}
+
+@keyframes fadeUp {
+    0% {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.cta-buttons {
+    margin-top: 40px;
+}
+
+.cta-buttons a {
+    display: inline-block;
+    padding: 18px 40px;
+    margin-right: 18px;
+    border-radius: 14px;
+    font-size: 18px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: 0.35s;
+}
+
+.primary-btn {
+    background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+    color: white;
+    box-shadow: 0 0 40px rgba(80, 120, 255, 0.55);
+}
+
+.primary-btn:hover {
+    transform: scale(1.07);
+}
+
+.secondary-btn {
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    color: #e2e8f0;
+    backdrop-filter: blur(12px);
+    background: rgba(255, 255, 255, 0.07);
+}
+
+.secondary-btn:hover {
+    background: rgba(255, 255, 255, 0.18);
+    transform: scale(1.05);
+}
+
+.hero-image {
+    width: 350px;
+    height: 350px;
+    background: rgba(0, 0, 0, 0) url('../../assets/images/ZoomLogo.png') no-repeat center center;
+    border-radius: 50%;
+    animation: floatingImg 7s ease-in-out infinite;
+}
+
+@keyframes floatingImg {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-28px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.services {
+    margin-top: 120px;
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    padding-bottom: 120px;
+}
+
+.card {
+    color: white;
+    width: 310px;
+    padding: 35px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(18px);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    text-align: center;
+    transition: 0.4s;
+    box-shadow: 0 0 35px rgba(0, 0, 0, 0.45);
+}
+
+.card:hover {
+    transform: translateY(-14px) scale(1.05);
+    box-shadow: 0 0 55px rgba(0, 200, 255, 0.4);
+    border-color: rgba(0, 200, 255, 0.5);
+}
+
+.card h3 {
+    font-size: 26px;
+    margin-bottom: 10px;
+}
+
+.card p {
+    opacity: 0.8;
+    font-size: 16px;
+}

@@ -1,0 +1,52 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 80px;
+  position: relative;
+  z-index: 10;
+}
+
+.login-btn {
+  display: inline-block;
+  padding: 18px 40px;
+  margin-right: 18px;
+  border-radius: 14px;
+  font-size: 18px;
+  text-decoration: none;
+  font-weight: 700;
+  transition: 0.35s;
+}
+
+.login-btn {
+  background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+  color: white;
+  box-shadow: 0 0 40px rgba(80, 120, 255, 0.55);
+}
+
+.login-btn:hover {
+  transform: scale(1.07);
+}
+
+.logo {
+  font-size: 36px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  background: linear-gradient(90deg, #4cc9ff, #b880ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 25px rgba(100, 180, 255, 0.4);
+}
+
+nav a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #cbd5e1;
+  font-weight: 400;
+  font-size: 16px;
+  transition: 0.25s;
+}
+
+nav a:hover {
+  color: white;
+}
